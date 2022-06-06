@@ -80,10 +80,10 @@ class AreTheyFollowMe:
 
 if __name__ == '__main__':
     base: str = "api.github.com"
-    os.environ['GITHUBTOKEN'] = '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'
+    os.environ['GITHUBTOKEN'] = 'your TOKEN'
     token: str = os.environ.get('GITHUBTOKEN')
     endpoint = '/user'
     if "/" not in endpoint:
         raise Exception("Endpoint may start with / ")
     req = AreTheyFollowMe('https://' + base, token, endpoint)
-    req.compareUsers('/users/PyMarcus/followers', '/users/PyMarcus/following')
+    req.compareUsers('/users/YOUR USER/followers', '/users/YOUR USER/following')
